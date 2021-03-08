@@ -1,4 +1,5 @@
 import Boundary.LoginPage;
+import Boundary.ProductCatalogPage;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,6 +14,8 @@ public class Main {
         login.start();
 
         // Product-ordering
+        ProductCatalogPage pc_page = new ProductCatalogPage();
+        pc_page.start();
         
         
     }

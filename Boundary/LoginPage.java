@@ -11,7 +11,7 @@ public class LoginPage {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Plz input your user ID and password.");
+        System.out.println("\nPlz input your user ID and password.");
 
         System.out.print("User ID: ");
         userId = input.nextLine();
@@ -46,7 +46,7 @@ public class LoginPage {
     }
 
     public void loginFail(){
-        System.out.println("Login fail... Plz try another account or password.");
+        System.out.println("\nLogin fail... Plz try another account or password.");
     }
 
 
