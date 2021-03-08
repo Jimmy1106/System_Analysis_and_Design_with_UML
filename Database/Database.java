@@ -1,4 +1,4 @@
-package Entity;
+package Database;
 
 import java.io.File;
 import java.util.Scanner;
@@ -12,7 +12,7 @@ public class Database {
     private File members;
     private Scanner db_members_reader;
 
-    Database(){
+    public Database(){
         try {
             members = new File(members_path);
             db_members_reader = new Scanner(members);

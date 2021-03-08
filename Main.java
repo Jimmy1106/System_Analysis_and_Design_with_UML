@@ -2,7 +2,7 @@ import Boundary.LoginPage;
 
 public class Main {
     public static void main(String[] args) {
-        // This is a driver function to test system Use-case.
+        // This is a driver function to run Use-cases of the System.
 
 
         System.out.println();

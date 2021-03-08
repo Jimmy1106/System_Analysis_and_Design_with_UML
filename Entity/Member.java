@@ -1,5 +1,7 @@
 package Entity;
 
+import Database.Database;
+
 public class Member {
     private String userId;
     private String password;
