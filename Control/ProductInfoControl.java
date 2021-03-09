@@ -6,14 +6,15 @@ import Boundary.ProductCatalogPage;
 import Entity.Product;
 
 public class ProductInfoControl {
-    private Vector<String> catalog_content;
-    private Vector<String> product_content;
+    private Vector<Object> catalog_content;
+    private Vector<Object> product_content;
 
     public void getProductCatalog(String catalog_sNum){
-        Product product = new Product();
-        catalog_content = product.getCatalog(catalog_sNum);
 
+        Product product = new Product();
         ProductCatalogPage pc_page = new ProductCatalogPage();
+
+        catalog_content = product.getCatalog(catalog_sNum);
         pc_page.displayProductList(catalog_content);
 
     }

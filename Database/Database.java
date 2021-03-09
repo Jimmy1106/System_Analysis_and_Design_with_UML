@@ -47,7 +47,7 @@ public class Database {
         return null;
     }
 
-    public Vector<String> getCatalog(String catalog_sNum){
+    public Vector<Object> getCatalog(String catalog_sNum){
         String s_catalogInfo;
         String [] catalogInfo;
 
@@ -58,7 +58,7 @@ public class Database {
             // <catalog_sNum>,<catalog name>,<product><product>...
             catalogInfo = s_catalogInfo.split(",");
             if (catalog_sNum.equals(catalogInfo[0])){
-                Vector<String> catalog_content = new Vector<>();
+                Vector<Object> catalog_content = new Vector<>();
                 for (int i=1; i<catalogInfo.length; i++){
                     catalog_content.addElement(catalogInfo[i]);
                 }

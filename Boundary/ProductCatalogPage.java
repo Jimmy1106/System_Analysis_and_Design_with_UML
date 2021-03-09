@@ -12,10 +12,14 @@ public class ProductCatalogPage {
         displayCatalogList();
     }
 
-    public void SelectCatalog(String catalog_sNum){
+    public void selectCatalog(String catalog_sNum){
 
         ProductInfoControl pi_control = new ProductInfoControl();
         pi_control.getProductCatalog(catalog_sNum);    
+    }
+
+    public void selectProduct(){
+        //////// 選取商品
     }
 
     private void displayCatalogList(){
@@ -36,10 +40,10 @@ public class ProductCatalogPage {
             
         System.out.println();
 
-        SelectCatalog(sNum);
+        selectCatalog(sNum);
     }
 
-    public void displayProductList(Vector<String> productList){
+    public void displayProductList(Vector<Object> productList){
         if (productList!=null){
             System.out.println("\nProducts of "+ productList.elementAt(0) +": ");
             drawDivider();

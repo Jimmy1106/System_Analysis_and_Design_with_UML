@@ -12,7 +12,7 @@ public class Product {
 
     private String catalog_sNum;
 
-    public Vector<String> getCatalog(String catalog_sNum){
+    public Vector<Object> getCatalog(String catalog_sNum){
         Database database  = new Database();
         return database.getCatalog(catalog_sNum);
     }
