@@ -1,0 +1,14 @@
+Product number,Product name,Price,Description,Catalog number 
+00101,Basketball,500,A basketball which NBA players play. ,001
+00102,Volleyball,300,There are three colors.,001
+00103,Baseball,200,The greatest property.,001
+00104,Tennis,200,None.,001
+00105,Golf,150,None.,001
+00106,Jogging shoes,2900,The most comfortable shoes your have ever seen.,001
+00201,Midi keyboard,3000,None.,002
+00202,Guitar,10000,None.,002
+00203,Drums,50000,None.,002
+00204,Drumsticks,300,None.,002
+00301,Office,1000,None,003
+00302,Windows,2000,None,003
+00303,NBA 2K21,2000,None,003

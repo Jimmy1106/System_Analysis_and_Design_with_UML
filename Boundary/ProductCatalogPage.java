@@ -6,20 +6,22 @@ import java.util.Vector;
 import Control.ProductInfoControl;
 
 public class ProductCatalogPage {
+
     public void start(){
-        System.out.println("Product Catalog");
+        System.out.println("\nProduct Catalog");
         drawDivider();
         displayCatalogList();
     }
 
-    public void selectCatalog(String catalog_sNum){
+    public void selectCatalog(String catalogNumber){
 
         ProductInfoControl pi_control = new ProductInfoControl();
-        pi_control.getProductCatalog(catalog_sNum);    
+        pi_control.getProductCatalog(catalogNumber);    
     }
 
-    public void selectProduct(){
-        //////// 選取商品
+    public void selectProduct(String productNumber){
+        ProductInfoControl pc_control = new ProductInfoControl();
+        pc_control.getProductInfoFromModel(productNumber);
     }
 
     private void displayCatalogList(){
@@ -27,32 +29,64 @@ public class ProductCatalogPage {
         // List --> 001)Sport 002)Music 00s3)Software
         
         Scanner input = new Scanner(System.in);
-        String sNum;
+        String catalogNumber;
 
         System.out.println("001) Sprot");
         System.out.println("002) Music");
-        System.out.println("002) Software");
+        System.out.println("003) Software");
         System.out.println();
 
         System.out.println("Select a product catalog by typing the serial number.");
         System.out.print("Your choice: ");
-        sNum = input.nextLine();
+        catalogNumber = input.nextLine();
             
         System.out.println();
 
-        selectCatalog(sNum);
+        selectCatalog(catalogNumber);
     }
 
-    public void displayProductList(Vector<Object> productList){
-        if (productList!=null){
-            System.out.println("\nProducts of "+ productList.elementAt(0) +": ");
+    public void displayProductList(Vector<Object> productCatalog){
+
+        String catalogNumber = (String)productCatalog.elementAt(0);
+        
+        if (productCatalog!=null){
+            System.out.println("\nProducts of "+ productCatalog.elementAt(1) +": "); ////////////
             drawDivider();
-            for (int i=1; i<productList.size(); i++){
-                System.out.println( i+ ": " + ((String)productList.elementAt(i)) );
+            // for (int i=2; i<productCatalog.size(); i++){
+            //     System.out.println( (i-1) + ": " + ((String)productCatalog.elementAt(i)) );
+            // }
+
+            // int i=1,num=0;
+            // while(i<productCatalog.size()-1){
+            //     num = i;
+            //     i++;
+            //     System.out.println( num + ": " + ((String)productCatalog.elementAt(i)) );
+            // }
+
+            for ( int i=2,num=1; i<productCatalog.size(); i++ ){
+                System.out.println( num + ": " + ((String)productCatalog.elementAt(i)) );
+                num=i;
             }
-        }        
+        }
+        
+        Scanner input = new Scanner(System.in);
+        String productNumber;
+
+        System.out.println("\nSelect a product to see the detail.");
+        System.out.print("Your choice: ");
+        
+        productNumber = catalogNumber + String.format("%02d", Integer.valueOf(input.nextLine()));
+        // productNumber = catalogNumber + addLeadingZero(input.nextLine());
+            
+        System.out.println();
+
+        selectProduct(productNumber);
     }
 
+    private String addLeadingZero(String inpuString){
+        return ("00"+ inpuString).substring(inpuString.length());
+    }
+    
     private void drawDivider(){
         for (int i=0; i<80; i++){
             System.out.print("-");

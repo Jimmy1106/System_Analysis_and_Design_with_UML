@@ -4,7 +4,7 @@ package Entity;
 
 public class OrderItem {
     
-    private String Order_sNum;
+    private String orderNumber;
     private int amount;
 
     public int getAmount() {
@@ -13,11 +13,11 @@ public class OrderItem {
     public void setAmount(int amount) {
         this.amount = amount;
     }
-    public String getOrder_sNum() {
-        return Order_sNum;
+    public String getOrderNumber() {
+        return orderNumber;
     }
-    public void setOrder_sNum(String order_sNum) {
-        Order_sNum = order_sNum;
+    public void setOrderNumber(String orderNumber) {
+        this.orderNumber = orderNumber;
     }
 
     public double getSubtotal(){

@@ -5,7 +5,7 @@ import java.util.Vector;
 
 public class Order {
     
-    private String serial_num;
+    private String orderNumber;
     private Vector Items;
     private char payment_method;
     private Date date;

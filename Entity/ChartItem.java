@@ -3,15 +3,15 @@ package Entity;
 // Record the amount of each chart-item.
 
 public class ChartItem {
-    private String product_sNum;
+    private String productNumber;
     private int amount;
 
 
-    public String getProduct_sNum() {
-        return product_sNum;
+    public String getproductNumber() {
+        return productNumber;
     }
-    public void setProduct_sNum(String product_sNum) {
-        this.product_sNum = product_sNum;
+    public void setproductNumber(String productNumber) {
+        this.productNumber = productNumber;
     }
     public int getAmount() {
         return amount;

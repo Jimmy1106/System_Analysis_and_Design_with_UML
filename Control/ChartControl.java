@@ -6,8 +6,8 @@ public class ChartControl {
     private Vector chartContent;
 
     public void getChartContent(){}
-    public void orderProduct(String product_sNum, int product_amount){}
-    public void modifyOrderedAmount(String product_sNum, int product_amount){}
-    public void removeOrderedProduct(String product_sNum){}
+    public void orderProduct(String productNumber, int product_amount){}
+    public void modifyOrderedAmount(String productNumber, int product_amount){}
+    public void removeOrderedProduct(String productNumber){}
     public boolean checkIfChartEmpty(){ return false; }
 }
