@@ -1,17 +1,17 @@
 package Entity;
 
-// Record the amount of each order-item.
+// Record the quantity of each order-item.
 
 public class OrderItem {
     
     private String orderNumber;
-    private int amount;
+    private int quantity;
 
-    public int getAmount() {
-        return amount;
+    public int getQuantity() {
+        return quantity;
     }
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
     public String getOrderNumber() {
         return orderNumber;

@@ -1,28 +1,31 @@
 package Entity;
 
-// Record the amount of each chart-item.
+// Record the product quantity of each chart-item.
 
 public class ChartItem {
     private String productNumber;
-    private int amount;
+    private int productQuantity;
 
 
-    public String getproductNumber() {
+    public String getProductNumber() {
         return productNumber;
     }
-    public void setproductNumber(String productNumber) {
+    public void setProductNumber(String productNumber) {
         this.productNumber = productNumber;
     }
-    public int getAmount() {
-        return amount;
+    public int getProductQuantity() {
+        return productQuantity;
     }
-    public void setAmount(int amount) {
-        this.amount = amount;   
+    public void setProductQuantity(int productQuantity) {
+        this.productQuantity = productQuantity;   
     }
 
     public double getSubtotal(){
-        // return getAmount()*(Produc(?).getPrice());
-        return 0.0; 
+        
+        Product product = new Product(); ////// 建構子可能要重寫
+        product.getProductInfoFromDatabase(productNumber);
+
+        return this.productQuantity*product.getPrice();
     }
 
 }

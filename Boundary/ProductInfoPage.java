@@ -1,10 +1,16 @@
 package Boundary;
 
-public class ProductInfoPage {
+import java.util.Scanner;
+
+import Control.ChartControl;
+
+public class ProductInfoPage extends Page{
     private String productNumber;
     private String productName;
     private double price;
     private String description;
+    private int productQuantity;
+    private boolean confirm = false;
 
 
     public ProductInfoPage( 
@@ -26,19 +32,41 @@ public class ProductInfoPage {
 
         System.out.println(productName);
         
-        drawDivider();
+        drawDivider("-");
 
         System.out.println( "Product number: " + productNumber );
         System.out.println( "Price: " + price );
         System.out.println( "Description: ");
         System.out.println( "\t" + description );
+
+        selectQuantityAndOrder();
             
     }
 
-    private void drawDivider(){
-        for (int i=0; i<80; i++){
-            System.out.print("-");
+    public void selectQuantityAndOrder(){
+        for ( int i=0; i<3 && !confirm; i++ ){
+            selectQuantity();
+            confirmOrder();
         }
-        System.out.println();
+    }
+
+    public void selectQuantity(){
+        Scanner input = new Scanner(System.in);
+        System.out.print("\nSelect order-quantity: ");
+        productQuantity = Integer.valueOf(input.nextLine());
+    }
+
+    public void confirmOrder(){
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("\nConfirm to order?(Y or N) ");
+        String confirmMsg = input.nextLine();
+
+        if(confirmMsg.equals("Y") || confirmMsg.equals("y")){
+            confirm = true;
+            ChartControl chartControl = new ChartControl();
+            chartControl.orderProduct(productNumber, productQuantity);
+        }
     }
 }

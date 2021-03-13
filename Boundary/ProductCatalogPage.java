@@ -5,11 +5,11 @@ import java.util.Vector;
 
 import Control.ProductInfoControl;
 
-public class ProductCatalogPage {
+public class ProductCatalogPage extends Page{
 
     public void start(){
         System.out.println("\nProduct Catalog");
-        drawDivider();
+        drawDivider("-");
         displayCatalogList();
     }
 
@@ -51,7 +51,7 @@ public class ProductCatalogPage {
         
         if (productCatalog!=null){
             System.out.println("\nProducts of "+ productCatalog.elementAt(1) +": "); ////////////
-            drawDivider();
+            drawDivider("-");
             // for (int i=2; i<productCatalog.size(); i++){
             //     System.out.println( (i-1) + ": " + ((String)productCatalog.elementAt(i)) );
             // }
@@ -75,23 +75,15 @@ public class ProductCatalogPage {
         System.out.println("\nSelect a product to see the detail.");
         System.out.print("Your choice: ");
         
-        productNumber = catalogNumber + String.format("%02d", Integer.valueOf(input.nextLine()));
-        // productNumber = catalogNumber + addLeadingZero(input.nextLine());
+        // productNumber = catalogNumber + String.format("%02d", Integer.valueOf(input.nextLine()));
+        productNumber = catalogNumber + addLeadingZero(input.nextLine());
             
         System.out.println();
 
         selectProduct(productNumber);
     }
 
-    private String addLeadingZero(String inpuString){
-        return ("00"+ inpuString).substring(inpuString.length());
+    private String addLeadingZero(String inputString){
+        return ("00"+ inputString).substring(inputString.length());
     }
-    
-    private void drawDivider(){
-        for (int i=0; i<80; i++){
-            System.out.print("-");
-        }
-        System.out.println();
-    }
-
 }
