@@ -63,7 +63,7 @@ public class ChartPage extends Page{
         Vector<ChartItem> chartItems = (Vector<ChartItem>)chartContent.elementAt(0);
         Vector<Product> products = (Vector<Product>)chartContent.elementAt(1);
 
-        totalPrice = 0;
+        totalPrice = (double)chartContent.elementAt(2);
 
         for (int i=0; i<chartItems.size(); i++){
 
@@ -75,7 +75,6 @@ public class ChartPage extends Page{
             productPrice = product.getPrice();
             productQuantity = chartItem.getProductQuantity();
             subtotal = chartItem.getSubtotal();
-            totalPrice += subtotal;
 
             System.out.println();
 
@@ -86,6 +85,8 @@ public class ChartPage extends Page{
             System.out.println("Quantity: " + productQuantity );
             System.out.println("Subtotal: " + subtotal );
         }
+
+        System.out.println("\nTotal price: " + totalPrice);
     }
 
     public void displayChartInfo(){

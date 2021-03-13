@@ -24,5 +24,15 @@ public class Chart {
         return chartItems;
     }
     
-    public double calculatePriceOfChart(){ return 0.0; }
+    public double calculatePriceOfChart(){
+
+        double totalPrice = 0.0;
+
+        for (int i=0; i<chartItems.size(); i++){
+            ChartItem chartItem = chartItems.elementAt(i);
+            totalPrice += chartItem.getSubtotal();
+        }
+
+        return totalPrice; 
+    }
 }

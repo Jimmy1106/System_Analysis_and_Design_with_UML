@@ -22,17 +22,11 @@ public class ChartControl {
         chart.addToChart(productNumber, productQuantity);
 
         Vector<ChartItem> chartItems = chart.getChartItems();
-        chartContent.addElement(chartItems); 
-
-        // // Get product number from chartItems.
-        // productNumber = chartItems.lastElement().getProductNumber();
-        // productQuantity = chartItems.lastElement().getProductQuantity();
-        // double subtotal = chartItems.lastElement().getSubtotal(); ////////////////////
-        // double totalPrice = 0.0;       ////////////////////
+        chartContent.addElement(chartItems);
 
 
         // 再多一個ItemOfChartContent
-        // 或是把所有products包裝成一個collections再丟進chartContent感覺會更好
+        // 或是把所有products包裝成一個collection再丟進chartContent感覺會更好
         Vector<Product> products = new Vector<>();
 
         for (ChartItem item:chartItems){
@@ -41,15 +35,8 @@ public class ChartControl {
             products.addElement(product);
         }
         chartContent.addElement(products);
+        chartContent.addElement(chart.calculatePriceOfChart());
 
-        // ChartPage chartPage = new ChartPage(
-        //     (String)productNumber,
-        //     (String)product.getName(),
-        //     (double)product.getPrice(), 
-        //     (int)productQuantity,
-        //     (double)subtotal,
-        //     (double)totalPrice
-        // );
         ChartPage chartPage = new ChartPage(chartContent);
         chartPage.start();
         // chartPage.displayChart();
