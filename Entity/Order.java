@@ -11,7 +11,9 @@ public class Order {
     private Date date;
     private char state;
 
-    public void saveOrder(){}
+    public void saveOrder(){
+        // System.out.println("\nKeep writing your code haha ~");
+    }
     public double calculatePriceOfOrder(){ return 0.0; }
     public void getItems(){}
 

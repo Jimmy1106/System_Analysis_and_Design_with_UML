@@ -1,6 +1,10 @@
 package Boundary;
 
+import java.util.Scanner;
 import java.util.Vector;
+
+import Control.ChartControl;
+import Entity.Chart;
 import Entity.ChartItem;
 import Entity.Product;
 
@@ -78,7 +82,7 @@ public class ChartPage extends Page{
 
             System.out.println();
 
-            System.out.print(productName);
+            System.out.print( "# "+ productName);
             System.out.println("(" + productNumber + ")");
             drawDivider("-");
             System.out.println("Price: " + productPrice );
@@ -87,6 +91,8 @@ public class ChartPage extends Page{
         }
 
         System.out.println("\nTotal price: " + totalPrice);
+
+        displayOptionMenu();
     }
 
     public void displayChartInfo(){
@@ -116,8 +122,45 @@ public class ChartPage extends Page{
             System.out.println("Subtotal: " + subtotal );
             
         }
-
         System.out.println("\nTotal price: " + totalPrice);
+    }
 
+    private void displayOptionMenu(){
+        System.out.println("\n[Option menu]\n");
+
+        System.out.println("1. Order other products.");
+        System.out.println("2. Clear Chart.");
+        System.out.println("3. Checkout.");
+
+        System.out.print("\nYour choice: ");
+
+        Scanner input = new Scanner(System.in);
+        int selectedItem = Integer.parseInt(input.nextLine());
+
+        switch (selectedItem) {
+
+            case 1:
+                // Back to catalog selecting process.
+                ProductCatalogPage productCatalogPage = new ProductCatalogPage();
+                productCatalogPage.start();
+                break;
+
+            case 2:
+                // Clear all products of in chart.
+                ChartControl chartControl = new ChartControl();
+                chartControl.clearChart();
+                System.out.println("\nChart has been empty now.");
+                break;
+                
+            case 3:
+                // Continue to checkout process.
+                System.out.println("\nKeep writing your code haha ~");
+                break;
+
+            default:
+                // Print Only 1, 2, and 3 you can select.
+                System.out.println("\nKeep writing your code haha ~");
+                break;    
+        }
     }
 }

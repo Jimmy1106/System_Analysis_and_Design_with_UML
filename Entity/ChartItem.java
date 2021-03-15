@@ -6,6 +6,12 @@ public class ChartItem {
     private String productNumber;
     private int productQuantity;
 
+    public ChartItem(){}
+
+    public ChartItem(String productNumber, int productQuantity){
+        this.productNumber = productNumber;
+        this.productQuantity = productQuantity;
+    }
 
     public String getProductNumber() {
         return productNumber;

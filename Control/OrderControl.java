@@ -10,6 +10,8 @@ public class OrderControl {
 
 
 
-    public void checkout(){}
+    public void checkout(){
+        // System.out.println("\nKeep writing your code haha ~");
+    }
     public void dealWithOrder(){}
 }

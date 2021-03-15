@@ -1,12 +1,17 @@
 package Database;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.util.Scanner;
 import java.util.Vector;
 
+import Entity.ChartItem;
 import Entity.Product;
 
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class Database {
 
@@ -14,11 +19,21 @@ public class Database {
     private String members_path = dbPath + "members.txt";
     private String catalogs_path = dbPath + "catalogs.txt";
     private String products_path = dbPath + "products.txt";
+    private String chartItems_path = dbPath + "chartItems.txt";
 
-    private File members, catalogs, products;
-    private Scanner db_members_reader, db_catalogs_reader, db_products_reader;
+    private File members, catalogs, products, chartItems;
+    private Scanner db_members_reader, db_catalogs_reader, db_products_reader, db_chartItems_reader;
 
     public Database(){
+        initReader();
+    }
+
+    public Database(char act){
+        if (act == 'w'){}
+        else initReader();
+    }
+
+    private void initReader(){
         try {
             members = new File(members_path);
             db_members_reader = new Scanner(members);
@@ -28,6 +43,9 @@ public class Database {
 
             products = new File(products_path);
             db_products_reader = new Scanner(products);
+
+            chartItems = new File(chartItems_path);
+            db_chartItems_reader = new Scanner(chartItems);
 
         } catch (FileNotFoundException e) {
             System.out.println("\nAn error occurred when constructing Database object.");
@@ -110,4 +128,43 @@ public class Database {
         return productInfoString;
     }
 
+    public String getChartItemsString(){
+        String chartItemsString = "";
+
+        String columnNames = db_chartItems_reader.nextLine();
+
+        while(db_chartItems_reader.hasNextLine()){
+            chartItemsString += (db_chartItems_reader.nextLine() + "\n");
+        }
+        return chartItemsString;
+    }
+
+    public void updateChartItems(Vector<ChartItem> chartItems){    
+        try(
+            FileWriter fw = new FileWriter(chartItems_path, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw)
+        )
+        {
+            for (ChartItem item: chartItems){
+                String line = item.getProductNumber() + "," + item.getProductQuantity();
+                out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void clearChartItems(){
+        try(
+            FileWriter fw = new FileWriter(chartItems_path, false);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw)
+        )
+        {
+            out.println("Product number,Quantity");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

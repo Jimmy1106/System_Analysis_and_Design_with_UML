@@ -6,7 +6,10 @@ public class Customer {
     private String phone;
     private String address;
 
-    public String getCustomerNumber(){return null;}
+    public String getCustomerNumber(){
+        // System.out.println("\nKeep writing your code haha ~");
+        return null;
+    }
     public String getName(){return null;}
     public String getPhone(){return null;}
     public String getAddress(){return null;}
