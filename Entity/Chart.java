@@ -68,7 +68,7 @@ public class Chart {
 
         for (int i=0; i<chartItems.size(); i++){
             ChartItem chartItem = chartItems.elementAt(i);
-            totalPrice += chartItem.getSubtotal();
+            totalPrice += chartItem.calculateSubtotal();
         }
 
         return totalPrice; 

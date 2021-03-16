@@ -16,6 +16,7 @@ public class ChartPage extends Page{
     private double subtotal;
     private double totalPrice;
     private Vector<Object> chartContent;
+    boolean chartEmpty = true;
 
     public ChartPage( Vector<Object> chartContent ){
         this.chartContent = chartContent;
@@ -66,6 +67,8 @@ public class ChartPage extends Page{
 
         Vector<ChartItem> chartItems = (Vector<ChartItem>)chartContent.elementAt(0);
         Vector<Product> products = (Vector<Product>)chartContent.elementAt(1);
+
+        chartEmpty = chartItems.isEmpty();
 
         totalPrice = (double)chartContent.elementAt(2);
 
@@ -154,7 +157,10 @@ public class ChartPage extends Page{
                 
             case 3:
                 // Continue to checkout process.
-                System.out.println("\nKeep writing your code haha ~");
+                if (!chartEmpty)
+                    System.out.println("\nKeep writing your code haha ~");
+                else
+                    System.out.println("\nYour chart is empty!!!");
                 break;
 
             default:

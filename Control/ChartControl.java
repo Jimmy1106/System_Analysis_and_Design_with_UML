@@ -14,19 +14,13 @@ public class ChartControl {
         chartContent = new Vector<>();
     }
 
-    public void getChartContent(){
-        // 檢視購物車使用案例流程
-        // 1.系統查詢購物車資料
-        // 2.系統計算小計和總金額
-        // 3.系統顯示購物車內容
-
-
-    }
-
     public void orderProduct(String productNumber, int productQuantity){
         
         Chart chart = new Chart();
-        chart.addToChart(productNumber, productQuantity);
+
+        if (productQuantity>0){
+            chart.addToChart(productNumber, productQuantity);
+        }
 
         Vector<ChartItem> chartItems = chart.getChartItems();
         chartContent.addElement(chartItems);
@@ -60,6 +54,25 @@ public class ChartControl {
         chart.clear();
     }
 
+    public boolean checkIfChartEmpty(){
+        // 當購物車不是空的, 客戶可以結帳商品
+
+        Vector<ChartItem> chartItems = (Vector<ChartItem>)chartContent.elementAt(0);
+        
+        if (chartItems.isEmpty())
+            return true;
+        return false; 
+    }
+
+    public void getChartContent(){
+        // 檢視購物車使用案例流程
+        // 1.系統查詢購物車資料
+        // 2.系統計算小計和總金額
+        // 3.系統顯示購物車內容
+
+
+    }
+
     public void modifyOrderQuantity(String productNumber, int productQuantity){
         // 修改訂購數量使用案例流程
         // 1.include::檢視購物車
@@ -76,9 +89,5 @@ public class ChartControl {
         // 3.系統將選取項目從購物車中刪除
         // 4.系統重新計算購物車的小計和總金額
         // 5.系統顯示購物車內容
-    }
-    public boolean checkIfChartEmpty(){
-        // 當購物車不是空的, 客戶可以結帳商品
-        return false; 
     }
 }

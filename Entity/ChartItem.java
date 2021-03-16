@@ -5,6 +5,7 @@ package Entity;
 public class ChartItem {
     private String productNumber;
     private int productQuantity;
+    private double subtotal;
 
     public ChartItem(){}
 
@@ -26,12 +27,18 @@ public class ChartItem {
         this.productQuantity = productQuantity;   
     }
 
-    public double getSubtotal(){
+    public double getSubtotal() {
+        return subtotal;
+    }
+
+    public double calculateSubtotal(){
         
         Product product = new Product(); ////// 建構子可能要重寫
         product.getProductInfoFromDatabase(productNumber);
 
-        return this.productQuantity*product.getPrice();
+        subtotal = this.productQuantity*product.getPrice();
+
+        return subtotal;
     }
 
 }
