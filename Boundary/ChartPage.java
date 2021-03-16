@@ -65,7 +65,7 @@ public class ChartPage extends Page{
 
     public void displayChartGoods(){
 
-        Vector<ChartItem> chartItems = (Vector<ChartItem>)chartContent.elementAt(0);
+        Vector<ChartItem> chartItems = ((Chart)chartContent.elementAt(0)).getChartItems();
         Vector<Product> products = (Vector<Product>)chartContent.elementAt(1);
 
         chartEmpty = chartItems.isEmpty();
@@ -95,7 +95,7 @@ public class ChartPage extends Page{
 
         System.out.println("\nTotal price: " + totalPrice);
 
-        displayOptionMenu();
+        // displayOptionMenu();
     }
 
     public void displayChartInfo(){
@@ -128,7 +128,7 @@ public class ChartPage extends Page{
         System.out.println("\nTotal price: " + totalPrice);
     }
 
-    private void displayOptionMenu(){
+    public void displayOptionMenu(){
         System.out.println("\n[Option menu]\n");
 
         System.out.println("1. Order other products.");

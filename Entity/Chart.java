@@ -73,4 +73,8 @@ public class Chart {
 
         return totalPrice; 
     }
+
+    public boolean isEmpty(){
+        return chartItems.isEmpty();
+    }
 }
