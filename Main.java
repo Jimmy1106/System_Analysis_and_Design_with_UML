@@ -12,7 +12,6 @@ public class Main {
         // User ID: uid, Password: pwd 
         LoginPage loginPage = new LoginPage();
         loginPage.start();
-        loginPage.displayLoginForm();
         loginPage.login();
 
         // Product-ordering

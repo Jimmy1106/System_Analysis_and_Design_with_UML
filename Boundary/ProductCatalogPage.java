@@ -21,11 +21,30 @@ public class ProductCatalogPage extends Page{
 
     public void selectCatalog(){
 
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Select a product catalog by typing the serial number.");
+        System.out.print("Your choice: ");
+        catalogNumber = input.nextLine();
+            
+        System.out.println();
+
         ProductInfoControl productInfoControl = new ProductInfoControl();
         productInfoControl.getProductCatalog(catalogNumber);
     }
 
     public void selectProduct(){
+
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("\nSelect a product to see the detail.");
+        System.out.print("Your choice: ");
+        
+        // productNumber = catalogNumber + String.format("%02d", Integer.valueOf(input.nextLine()));
+        productNumber = catalogNumber + addLeadingZero(input.nextLine());
+            
+        System.out.println();
+
         ProductInfoControl productInfoControl = new ProductInfoControl();
         productInfoControl.getProductInfoFromModel(productNumber);
     }
@@ -34,17 +53,9 @@ public class ProductCatalogPage extends Page{
         // Display UI to let user select product catalog.
         // List --> 001)Sport 002)Music 00s3)Software
         
-        Scanner input = new Scanner(System.in);
-
         System.out.println("001) Sprot");
         System.out.println("002) Music");
         System.out.println("003) Software");
-        System.out.println();
-
-        System.out.println("Select a product catalog by typing the serial number.");
-        System.out.print("Your choice: ");
-        catalogNumber = input.nextLine();
-            
         System.out.println();
 
         // selectCatalog(catalogNumber);
@@ -52,7 +63,7 @@ public class ProductCatalogPage extends Page{
 
     public void displayProductList(Vector<Object> productCatalog){
 
-        String catalogNumber = (String)productCatalog.elementAt(0);
+        catalogNumber = (String)productCatalog.elementAt(0);
         
         if (productCatalog!=null){
             System.out.println("\nProducts of "+ productCatalog.elementAt(1) +": "); ////////////
@@ -73,16 +84,6 @@ public class ProductCatalogPage extends Page{
                 num=i;
             }
         }
-        
-        Scanner input = new Scanner(System.in);
-        
-        System.out.println("\nSelect a product to see the detail.");
-        System.out.print("Your choice: ");
-        
-        // productNumber = catalogNumber + String.format("%02d", Integer.valueOf(input.nextLine()));
-        productNumber = catalogNumber + addLeadingZero(input.nextLine());
-            
-        System.out.println();
 
         // selectProduct(productNumber);
     }

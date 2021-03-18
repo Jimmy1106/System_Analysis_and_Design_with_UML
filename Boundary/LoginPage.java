@@ -28,6 +28,8 @@ public class LoginPage extends Page{
 
     public void login(){
 
+        displayLoginForm();
+
         UserAuthenticationControl userAuthenticationControl = new UserAuthenticationControl(
             userId, password
         );

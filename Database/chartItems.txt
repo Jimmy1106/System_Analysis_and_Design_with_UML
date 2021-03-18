@@ -1,2 +1,1 @@
 Product number,Quantity
-00303,6
