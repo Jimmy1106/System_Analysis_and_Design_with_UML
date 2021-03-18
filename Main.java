@@ -10,13 +10,16 @@ public class Main {
 
         // Login
         // User ID: uid, Password: pwd 
-        LoginPage login = new LoginPage();
-        login.start();
+        LoginPage loginPage = new LoginPage();
+        loginPage.start();
+        loginPage.displayLoginForm();
+        loginPage.login();
 
         // Product-ordering
-        ProductCatalogPage pc_page = new ProductCatalogPage();
-        pc_page.start();
-        
+        ProductCatalogPage productCatalogPage = new ProductCatalogPage();
+        productCatalogPage.start();
+        productCatalogPage.displayCatalogList();
+        productCatalogPage.selectCatalog();
         
     }
 }

@@ -25,6 +25,10 @@ public class ProductInfoPage extends Page{
         this.price = price;
         this.description = description;
     }
+    public void start(){
+        System.out.println("\nProduct Information");
+        drawDivider("*");
+    }
 
     public void displayProductInfo(){
         

@@ -1,11 +1,9 @@
 package Boundary;
 
-public class MainPage {
+public class MainPage extends Page{
     public void start(){
         System.out.println("\nWelcome to main page.");
-        for (int i=0; i<80; i++){
-            System.out.print("-");
-        }
+        drawDivider("*");
         System.out.println();
     }
 

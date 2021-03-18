@@ -13,10 +13,11 @@ public class ProductInfoControl {
     public void getProductCatalog(String catalogNumber){
 
         Product product = new Product();
-        ProductCatalogPage pc_page = new ProductCatalogPage();
+        ProductCatalogPage productCatalogPage = new ProductCatalogPage();
 
         productCatalog = product.getCatalog(catalogNumber);
-        pc_page.displayProductList(productCatalog); /////////////
+        productCatalogPage.displayProductList(productCatalog); /////////////
+        productCatalogPage.selectProduct();
 
     }
     public void getProductInfoFromModel(String productNumber){
@@ -31,14 +32,14 @@ public class ProductInfoControl {
         // productInfo.addElement(product.getDescription());
         // productInfo.addElement(product.getCatalogNumber());
 
-        ProductInfoPage pi_page = new ProductInfoPage(
+        ProductInfoPage productInfoPage = new ProductInfoPage(
             product.getProductNumber(),
             product.getName(),
             product.getPrice(),
             product.getDescription()
         );
 
-        pi_page.displayProductInfo();     
+        productInfoPage.displayProductInfo();     
     }
 
     public Vector<Object> getProductInfo() {

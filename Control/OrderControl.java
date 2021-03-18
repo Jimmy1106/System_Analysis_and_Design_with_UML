@@ -11,7 +11,8 @@ public class OrderControl {
 
 
     public void checkout(){
-        // System.out.println("\nKeep writing your code haha ~");
+        System.out.println("\nCheckout successfully!");
+        System.out.println("\nKeep writing your code haha ~");
     }
     public void dealWithOrder(){}
 }

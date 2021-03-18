@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 import Control.ChartControl;
+import Control.OrderControl;
 import Entity.Chart;
 import Entity.ChartItem;
 import Entity.Product;
@@ -157,10 +158,13 @@ public class ChartPage extends Page{
                 
             case 3:
                 // Continue to checkout process.
-                if (!chartEmpty)
-                    System.out.println("\nKeep writing your code haha ~");
-                else
+                if (!chartEmpty){
+                    OrderControl orderControl = new OrderControl();
+                    orderControl.checkout();
+                }
+                else{
                     System.out.println("\nYour chart is empty!!!");
+                }
                 break;
 
             default:

@@ -6,30 +6,35 @@ import java.util.Vector;
 import Control.ProductInfoControl;
 
 public class ProductCatalogPage extends Page{
+    private String catalogNumber;
+    private String productNumber;
 
+    public ProductCatalogPage(){
+        catalogNumber = "";
+    }
+    
     public void start(){
         System.out.println("\nProduct Catalog");
-        drawDivider("-");
-        displayCatalogList();
+        drawDivider("*");
+        System.out.println();
     }
 
-    public void selectCatalog(String catalogNumber){
+    public void selectCatalog(){
 
-        ProductInfoControl pi_control = new ProductInfoControl();
-        pi_control.getProductCatalog(catalogNumber);    
+        ProductInfoControl productInfoControl = new ProductInfoControl();
+        productInfoControl.getProductCatalog(catalogNumber);
     }
 
-    public void selectProduct(String productNumber){
-        ProductInfoControl pc_control = new ProductInfoControl();
-        pc_control.getProductInfoFromModel(productNumber);
+    public void selectProduct(){
+        ProductInfoControl productInfoControl = new ProductInfoControl();
+        productInfoControl.getProductInfoFromModel(productNumber);
     }
 
-    private void displayCatalogList(){
+    public void displayCatalogList(){
         // Display UI to let user select product catalog.
         // List --> 001)Sport 002)Music 00s3)Software
         
         Scanner input = new Scanner(System.in);
-        String catalogNumber;
 
         System.out.println("001) Sprot");
         System.out.println("002) Music");
@@ -42,7 +47,7 @@ public class ProductCatalogPage extends Page{
             
         System.out.println();
 
-        selectCatalog(catalogNumber);
+        // selectCatalog(catalogNumber);
     }
 
     public void displayProductList(Vector<Object> productCatalog){
@@ -70,8 +75,7 @@ public class ProductCatalogPage extends Page{
         }
         
         Scanner input = new Scanner(System.in);
-        String productNumber;
-
+        
         System.out.println("\nSelect a product to see the detail.");
         System.out.print("Your choice: ");
         
@@ -80,7 +84,7 @@ public class ProductCatalogPage extends Page{
             
         System.out.println();
 
-        selectProduct(productNumber);
+        // selectProduct(productNumber);
     }
 
     private String addLeadingZero(String inputString){

@@ -3,12 +3,16 @@ package Boundary;
 import java.util.Scanner;
 import Control.UserAuthenticationControl;
 
-public class LoginPage {
+public class LoginPage extends Page{
     private String userId;
     private String password;
 
     public void start(){
+        System.out.println("\nLogin Page");
+        drawDivider("*");
+    }
 
+    public void displayLoginForm(){
         Scanner input = new Scanner(System.in);
 
         System.out.println("\nPlz input your user ID and password.");
@@ -20,23 +24,21 @@ public class LoginPage {
         password = input.nextLine();
         
         System.out.println();
-
-        login(userId, password);
     }
 
-    public void login(String userId, String password){
+    public void login(){
 
-        UserAuthenticationControl UA_control = new UserAuthenticationControl(
+        UserAuthenticationControl userAuthenticationControl = new UserAuthenticationControl(
             userId, password
         );
 
-        if(!(UA_control.authenticate())){
+        if(!(userAuthenticationControl.authenticate())){
             loginFail();
         }
 
-        // UA_control.authenticate();
+        // userAuthenticationControl.authenticate();
 
-        // if( UA_control.authenticate() ){
+        // if( userAuthenticationControl.authenticate() ){
         //     System.out.println("Login successfully!");
         // }
         // else{
