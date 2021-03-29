@@ -7,7 +7,7 @@ import Boundary.ProductInfoPage;
 import Entity.Product;
 
 public class ProductInfoControl {
-    private Vector<Object> productCatalog = null;
+    private Vector<Object> catalogContent = null;
     private Vector<Object> productInfo = null;
 
     public void getProductCatalog(String catalogNumber){
@@ -15,8 +15,8 @@ public class ProductInfoControl {
         Product product = new Product();
         ProductCatalogPage productCatalogPage = new ProductCatalogPage();
 
-        productCatalog = product.getCatalog(catalogNumber);
-        productCatalogPage.displayProductList(productCatalog); /////////////
+        catalogContent = product.getCatalog(catalogNumber);
+        productCatalogPage.displayProductList(catalogContent); /////////////
         productCatalogPage.selectProduct();
 
     }
@@ -42,8 +42,8 @@ public class ProductInfoControl {
         productInfoPage.displayProductInfo();     
     }
 
-    public Vector<Object> getProductInfo() {
-        return productInfo;
-    }
+    // public Vector<Object> getProductInfo() {
+    //     return productInfo;
+    // }
 
 }

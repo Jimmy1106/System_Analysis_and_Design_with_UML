@@ -64,14 +64,14 @@ public class Chart {
     
     public double calculatePriceOfChart(){
 
-        double totalPrice = 0.0;
+        double totalAmount = 0.0;
 
         for (int i=0; i<chartItems.size(); i++){
             ChartItem chartItem = chartItems.elementAt(i);
-            totalPrice += chartItem.calculateSubtotal();
+            totalAmount += chartItem.calculateSubtotal();
         }
 
-        return totalPrice; 
+        return totalAmount; 
     }
 
     public boolean isEmpty(){
