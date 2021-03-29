@@ -1,10 +1,10 @@
----
-title: 'System Analysis & Design with UML'
----
+<!-- --- -->
+<!-- title: 'System Analysis & Design with UML' -->
+<!-- --- -->
 
 # **System Analysis & Design with UML**
 
-Implement ordering system with Object-oriented analysis, design, and programming.
+Implement ordering system with object-oriented analysis, design, and programming.
 
 <br>
 
@@ -105,11 +105,11 @@ Implement ordering system with Object-oriented analysis, design, and programming
 
 
 
-<style>
+<!-- <style>
 .blue {
   color: blue;
 }
 .red {
   color: red;
 }
-</style>
+</style> -->
