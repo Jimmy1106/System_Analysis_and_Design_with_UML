@@ -50,9 +50,6 @@ Implement ordering system with object-oriented analysis, design, and programming
 ### **Activity diagram**
 
 - Login
-&nbsp;
-
-<br>
 
 ![](https://i.imgur.com/9vX097u.png)
 
@@ -71,7 +68,6 @@ Implement ordering system with object-oriented analysis, design, and programming
 ### **Seguence diagram**
 
 - Login
-&nbsp;
 
 ![](https://i.imgur.com/1bZxkzn.png)
 
@@ -80,7 +76,6 @@ Implement ordering system with object-oriented analysis, design, and programming
 
 - Ordering product
 
-&nbsp;
 ![](https://i.imgur.com/sdm1q4g.png)
 
 
@@ -88,16 +83,14 @@ Implement ordering system with object-oriented analysis, design, and programming
 
 
 - Control classes
-<br>
 
-    ![](https://i.imgur.com/vPTMe8x.png)
+![](https://i.imgur.com/vPTMe8x.png)
 
 
 <br>
 
 - Entity classes
-&nbsp;
-&ensp;
+
 ![](https://i.imgur.com/fXKnE1e.png)
 
 
