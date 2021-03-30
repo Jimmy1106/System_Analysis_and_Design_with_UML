@@ -56,7 +56,7 @@ public class ProductInfoPage extends Page{
 
     public void selectQuantity(){
         Scanner input = new Scanner(System.in);
-        System.out.print("\nSelect order-quantity: ");
+        System.out.print("\nEnter order-quantity: ");
         try {
             productQuantity = Integer.valueOf(input.nextLine());
         } catch (Exception e) {

@@ -1,2 +1,3 @@
 Product number,Quantity
-00103,3
+00106,3
+00106,3
