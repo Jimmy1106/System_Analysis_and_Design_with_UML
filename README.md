@@ -60,8 +60,7 @@ Implement ordering system with object-oriented analysis, design, and programming
 <br>
 
 - Ordering product
-&ensp;
-&nbsp;
+
 ![](https://i.imgur.com/snefQs0.png)
 
 
