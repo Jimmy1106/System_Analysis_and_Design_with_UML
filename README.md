@@ -51,14 +51,18 @@ Implement ordering system with object-oriented analysis, design, and programming
 
 - Login
 
-![](https://i.imgur.com/9vX097u.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/9vX097u.png" width="">
+
+<!-- ![](https://i.imgur.com/9vX097u.png) -->
 
 
 <br>
 
 - Ordering product
 
-![](https://i.imgur.com/snefQs0.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/snefQs0.png" width="">
+
+<!-- ![](https://i.imgur.com/snefQs0.png) -->
 
 
 
@@ -69,14 +73,18 @@ Implement ordering system with object-oriented analysis, design, and programming
 
 - Login
 
-![](https://i.imgur.com/1bZxkzn.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/1bZxkzn.png" width="">
+
+<!-- ![](https://i.imgur.com/1bZxkzn.png) -->
 
 
 <br>
 
 - Ordering product
 
-![](https://i.imgur.com/sdm1q4g.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/sdm1q4g.png" width="">
+
+<!-- ![](https://i.imgur.com/sdm1q4g.png) -->
 
 
 ### **Class diagram**
@@ -84,51 +92,67 @@ Implement ordering system with object-oriented analysis, design, and programming
 
 - Control classes
 
-![](https://i.imgur.com/vPTMe8x.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/vPTMe8x.png" width="">
+
+<!-- ![](https://i.imgur.com/vPTMe8x.png) -->
 
 
 <br>
 
 - Entity classes
 
-![](https://i.imgur.com/fXKnE1e.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/fXKnE1e.png" width="">
+
+<!-- ![](https://i.imgur.com/fXKnE1e.png) -->
 
 
 ## **Demo**
 
 - Login with user ID & password.
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/httLjB5.png" width="">
+
+<!-- &nbsp; -->
 &ensp;
-![](https://i.imgur.com/httLjB5.png)
+<!-- ![](https://i.imgur.com/httLjB5.png) -->
 
 - Select a catalog to browse products.
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/M9LJtv1.png" width="">
+
+<!-- &nbsp; -->
 &ensp;
-![](https://i.imgur.com/M9LJtv1.png)
+<!-- ![](https://i.imgur.com/M9LJtv1.png) -->
 
 
 - Select interested product.
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/rHqAXSh.png" width="">
+
+<!-- &nbsp; -->
 &ensp;
-![](https://i.imgur.com/rHqAXSh.png)
+<!-- ![](https://i.imgur.com/rHqAXSh.png) -->
 
 
 
 - Enter the quantity & Comfirm the quantities you ordered.
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/WgiVx6Z.png" width="">
+
+<!-- &nbsp; -->
 &ensp;
-![](https://i.imgur.com/WgiVx6Z.png)
+<!-- ![](https://i.imgur.com/WgiVx6Z.png) -->
 
 
 - The products you ordered would be in your chart.
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/GulpzOz.png" width="">
+
+<!-- &nbsp; -->
 &ensp;
-![](https://i.imgur.com/GulpzOz.png)
+<!-- ![](https://i.imgur.com/GulpzOz.png) -->
 
 - Checkout when finishing your odrer.
-&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/KQq64ol.png" width="">
+
+<!-- &nbsp; -->
 &ensp;
-![](https://i.imgur.com/KQq64ol.png)
+<!-- ![](https://i.imgur.com/KQq64ol.png) -->
 
 
 
