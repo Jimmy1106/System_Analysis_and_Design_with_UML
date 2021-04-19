@@ -6,7 +6,6 @@
 
 Implement ordering system with object-oriented analysis, design, and programming.
 
-<br>
 
 
 <!-- **Table of Contents**
@@ -56,14 +55,14 @@ Implement ordering system with object-oriented analysis, design, and programming
 <!-- ![](https://i.imgur.com/9vX097u.png) -->
 
 
-<br>
+&ensp;
 
 - Ordering product
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/snefQs0.png" width="">
 
 <!-- ![](https://i.imgur.com/snefQs0.png) -->
-
+&ensp;
 
 
 ## **Object-oriented design**
@@ -78,14 +77,14 @@ Implement ordering system with object-oriented analysis, design, and programming
 <!-- ![](https://i.imgur.com/1bZxkzn.png) -->
 
 
-<br>
+&ensp;
 
 - Ordering product
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/sdm1q4g.png" width="">
 
 <!-- ![](https://i.imgur.com/sdm1q4g.png) -->
-
+&ensp;
 
 ### **Class diagram**
 
@@ -97,14 +96,14 @@ Implement ordering system with object-oriented analysis, design, and programming
 <!-- ![](https://i.imgur.com/vPTMe8x.png) -->
 
 
-<br>
+&ensp;
 
 - Entity classes
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/fXKnE1e.png" width="">
 
 <!-- ![](https://i.imgur.com/fXKnE1e.png) -->
-
+&ensp;
 
 ## **Demo**
 
